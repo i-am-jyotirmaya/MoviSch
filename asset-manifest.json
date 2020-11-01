@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/MoviSch/static/css/main.8014e31f.chunk.css",
-    "main.js": "/MoviSch/static/js/main.8e51862a.chunk.js",
-    "main.js.map": "/MoviSch/static/js/main.8e51862a.chunk.js.map",
+    "main.js": "/MoviSch/static/js/main.b8834773.chunk.js",
+    "main.js.map": "/MoviSch/static/js/main.b8834773.chunk.js.map",
     "runtime-main.js": "/MoviSch/static/js/runtime-main.cfc9394c.js",
     "runtime-main.js.map": "/MoviSch/static/js/runtime-main.cfc9394c.js.map",
     "static/js/2.baa0da23.chunk.js": "/MoviSch/static/js/2.baa0da23.chunk.js",
     "static/js/2.baa0da23.chunk.js.map": "/MoviSch/static/js/2.baa0da23.chunk.js.map",
     "index.html": "/MoviSch/index.html",
-    "precache-manifest.71173896aeaa21b2b76ca372884e67e3.js": "/MoviSch/precache-manifest.71173896aeaa21b2b76ca372884e67e3.js",
+    "precache-manifest.ebf496d8c872de3ecbf876735f754248.js": "/MoviSch/precache-manifest.ebf496d8c872de3ecbf876735f754248.js",
     "service-worker.js": "/MoviSch/service-worker.js",
     "static/css/main.8014e31f.chunk.css.map": "/MoviSch/static/css/main.8014e31f.chunk.css.map",
     "static/js/2.baa0da23.chunk.js.LICENSE.txt": "/MoviSch/static/js/2.baa0da23.chunk.js.LICENSE.txt",
@@ -21,6 +21,6 @@
     "static/js/runtime-main.cfc9394c.js",
     "static/js/2.baa0da23.chunk.js",
     "static/css/main.8014e31f.chunk.css",
-    "static/js/main.8e51862a.chunk.js"
+    "static/js/main.b8834773.chunk.js"
   ]
 }

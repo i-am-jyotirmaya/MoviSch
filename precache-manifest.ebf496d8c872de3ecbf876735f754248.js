@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a8fa0a6a282577337e17382485e9ad58",
+    "revision": "603eb3e05d5ed5a1df7d3b1eb7d33f8b",
     "url": "/MoviSch/index.html"
   },
   {
-    "revision": "7b7829e0d64875e966f7",
+    "revision": "8e1dc4ce2c3f178e6a00",
     "url": "/MoviSch/static/css/main.8014e31f.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/MoviSch/static/js/2.baa0da23.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7b7829e0d64875e966f7",
-    "url": "/MoviSch/static/js/main.8e51862a.chunk.js"
+    "revision": "8e1dc4ce2c3f178e6a00",
+    "url": "/MoviSch/static/js/main.b8834773.chunk.js"
   },
   {
     "revision": "28a63bbda58c1bf12ab7",
