@@ -1,0 +1,29 @@
+p {
+    >span {
+        display: block;
+        color: #f5f5f5;
+        &:nth-child(1) {
+            font-size: 18px;
+            color: var(--primary-color);
+            font-weight: 200;
+            
+            span {
+                display: inline;
+                font-weight: 100;
+                font-style: italic;
+            }
+        }
+        &:nth-child(2) {
+            font-size: 14px;
+        }
+        &:nth-child(3) {
+            font-size: 18px;
+            span {
+                display: inline-block;
+                &::first-letter {
+                    color: var(--primary-color)
+                }
+            }
+        }
+    }
+}
