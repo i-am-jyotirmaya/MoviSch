@@ -7,12 +7,13 @@ import About from '../../components/About/About';
 import Searchbox from '../../components/Searchbox/Searchbox';
 import { ReactComponent as LogoDesktop } from "../../assets/HomePageLogoDesktop.svg";
 import { ReactComponent as LogoMobile } from "../../assets/HomePageLogoMobile.svg";
-import { search, searchByName, searchTextInput, selectError, selectSearchResult, selectSearchText } from "./HomeSlice";
+import { clearSearchData, clearSearchDataList, search, searchByName, searchTextInput, selectError, selectSearchResult, selectSearchText } from "./HomeSlice";
 import { ReactComponent as RollLoader } from '../../assets/rolling-loader.svg';
 
 import './Home.scss';
 import Logo from '../../components/Logo/Logo';
 import SearchSuggestion from '../SearchSuggestion/SearchSuggestion';
+import { Link } from 'react-router-dom';
 
 const logo = {
     'focus': {
@@ -48,18 +49,31 @@ const Home = () => {
     const searchResult = useSelector(selectSearchResult);
     const error = useSelector(selectError);
     const [isSuggestionOpen, toggleSuggestionOpen] = useCycle('close', 'open');
+    const store = useStore();
+
+    const transition = {
+        type:"spring",
+        stiffness: 150,
+        damping: 17,
+        duration: .5,
+        // ease: [0.43, 0.13, 0.23, 0.96]
+    };
+    const variants = {
+        exit: {
+            x: "-100vw",
+            opacity: 0,
+            transition
+        },
+        in: {
+            x: 0,
+            opacity: 1,
+            transition
+        }
+    }
 
     useEffect(() => {
-        let mql = window.matchMedia('(max-width: 500px)');
-        setIsMobile(mql.matches);
-        mql.addEventListener("change", () => {
-            setIsMobile(mql.matches);
-            console.log(isMobile);
-        });
-
-        return () => {
-            mql.removeEventListener("change");
-        }
+        console.log(store.getState());
+        setIsMobile(store.getState().app.isMobile)
     }, [])
     console.log(searchResult);
 
@@ -71,13 +85,24 @@ const Home = () => {
             toggleSuggestionOpen(0);
             setIsSearching(false);
         }
-    }, [searchResult.totalResults])
+    }, [searchResult.totalResults, searchResult.results.length])
     // toggleSuggestionOpen(searchResult.totalResults === 0 ? 2 : 1);
     // console.log(store.getState());
     console.log(isSuggestionOpen);
 
+    useEffect(() => {
+        setIsSearching(false);
+    }, [searchResult.page]);
+
+    const onPageChange = (selectedItem) => {
+        dispatch(clearSearchDataList());
+        console.log(selectedItem);
+        setIsSearching(true);
+        dispatch(searchByName(searchText, selectedItem.selected+1));
+    }
+
     return (
-        <section className="home">
+        <motion.section initial="exit" animate="in" exit="exit" variants={variants} className="home">
             <Logo isMobile={isMobile} style={focus ? 'focus' : 'blur'}/>
             {/* <motion.div initial={false} ></motion.div> */}
             <AnimatePresence>
@@ -92,11 +117,13 @@ const Home = () => {
                     {isMobile ? <LogoMobile/> : <LogoDesktop/>}
                 </motion.div>}
             </AnimatePresence>
+            <Link to="/details/5">Det</Link>
             <Searchbox 
                 onFocus={() => setFocus(true)} 
                 onBlur={() => !searchText && setFocus(false)}
                 // onInput={(ev) => dispatch(searchTextInput(ev.target.value))}
                 onInput={(ev) => {
+                            dispatch(clearSearchData());
                             searchDebounced(ev.target.value, dispatch);
                             if(ev.target.value) setIsSearching(true);
                             else setIsSearching(false);
@@ -106,7 +133,7 @@ const Home = () => {
                 />
             {searchResult.totalResults === 0 && error !== '' && <h2 className="search-error">{error}</h2>}
             <AnimatePresence>
-            {searchResult.totalResults !== 0 && <SearchSuggestion data={searchResult} variant={isSuggestionOpen} />}
+            {searchResult.totalResults !== 0 && <SearchSuggestion data={searchResult} variant={isSuggestionOpen} onPageChange={onPageChange} />}
             </AnimatePresence>
             <motion.div
                 className="mt-auto"
@@ -116,7 +143,7 @@ const Home = () => {
             >
                 <About/>
             </motion.div>
-        </section>
+        </motion.section>
     );
 }
 

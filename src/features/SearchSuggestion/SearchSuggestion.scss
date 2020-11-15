@@ -22,5 +22,44 @@
         }
         
     }
+
+    .pagination {
+        list-style: none;
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+        margin-top: 2.5em;
+        padding: 0;
+        >li {
+            height: 30px;
+            min-width: 30px;
+            background-color: var(--primary-color);
+            border-radius: .5em;
+            border: solid 1px black;
+            display: grid;
+            place-content: center;
+            font-size: .7em;
+            font-weight: bold;
+            padding: .5em;
+            margin: 0 .5em;
+            cursor: pointer;
+            &.active-item {
+                box-shadow: 0 0 10px var(--primary-color);
+            }
+            &.disabled {
+                filter: brightness(.7);
+                pointer-events: none;
+            }
+            &:focus-within {
+                
+            }
+            >a {
+                display: inline-block;
+                padding: .9em;
+                margin: -.9em;
+                outline: none;
+            }
+        }
+    }
     
 }

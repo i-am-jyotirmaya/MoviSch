@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import './ListItem.scss';
 import NoPoster from '../../assets/no-poster.png'
 import { motion } from 'framer-motion';
+import { useStore } from 'react-redux';
 
 const itemVariants = {
     open: {
@@ -24,6 +25,8 @@ const itemVariants = {
 const ListItem = ({leadingImage, title, subTitle, endImage}) => {
     const [leadingImageURL, setLeadingImageURL] = useState('');
     const [endImageURL, setEndImageURL] = useState('');
+    const store = useStore();
+    const isMobile = store.getState().app.isMobile;
 
     useEffect(() => {
         if(leadingImage === 'N/A')
@@ -44,13 +47,13 @@ const ListItem = ({leadingImage, title, subTitle, endImage}) => {
     }, [leadingImage, endImage]);
 
     return (
-        <motion.li style={itemVariants.close} initial={false} className="list__list-item" variants={itemVariants}>
+        <motion.li animate={itemVariants.open} initial={itemVariants.close} className="list__list-item" variants={itemVariants}>
             <div className="listItem">
                 {leadingImage && <div className="listItem__leadimg">
                     <img src={leadingImageURL} alt="" className="listItem__leadimg__img"/>
                 </div>}
                 <div className="listItem__text">
-                    <h1>{title}</h1>
+                    <h1 style={{fontSize: isMobile ? 'large': 'x-large'}}>{title}</h1>
                     <h3>{subTitle}</h3>
                 </div>
                 {endImage && <div className="listItem__endimg">

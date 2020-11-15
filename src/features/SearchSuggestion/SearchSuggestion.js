@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import ListItem from '../../components/ListItem/ListItem';
 
 import './SearchSuggestion.scss';
+import ReactPaginate from 'react-paginate';
 
 const variants = {
     open: {
@@ -32,8 +33,8 @@ const itemVariants = {
     }
 }
 
-const SearchSuggestion = ({data, variant}) => {
-    console.log(data.results.length, variant);
+const SearchSuggestion = ({data, variant, onPageChange}) => {
+    console.log(data, variant);
     return (
         <motion.section 
             animate={variant} 
@@ -56,6 +57,16 @@ const SearchSuggestion = ({data, variant}) => {
                     }
                 </ul>
             </div>
+            <ReactPaginate 
+                pageCount={Math.floor(+data.totalResults/10 + (data.totalResults % 10 === 0 || data.totalResults < 10 ? 0 : 1))}
+                pageRangeDisplayed={2}
+                activeClassName={"active-item"}
+                marginPagesDisplayed={1}
+                previousLabel={"Prev"}
+                nextLabel={"Next"}
+                containerClassName={"pagination"}
+                onPageChange={onPageChange}
+            />
         </motion.section>
     )
 }

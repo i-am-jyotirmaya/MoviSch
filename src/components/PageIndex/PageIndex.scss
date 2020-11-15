@@ -1,0 +1,19 @@
+.index-container {
+    max-width: 60vw;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+
+    &__index {
+        height: 30px;
+        width: 30px;
+        background-color: var(--primary-color);
+        // border: solid 2px black;
+        border-radius: .5em;
+        display: grid;
+        place-content: center;
+        font-weight: bold;
+        font-size: .8em;
+        margin: 0 10px;
+    }
+}
