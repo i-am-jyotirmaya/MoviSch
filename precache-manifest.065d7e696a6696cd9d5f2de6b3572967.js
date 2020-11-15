@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "603eb3e05d5ed5a1df7d3b1eb7d33f8b",
+    "revision": "8afca6d870084aefbbd7f1dfa3f8b39e",
     "url": "/MoviSch/index.html"
   },
   {
-    "revision": "8e1dc4ce2c3f178e6a00",
-    "url": "/MoviSch/static/css/main.8014e31f.chunk.css"
+    "revision": "ba620fc13a24a3be32e3",
+    "url": "/MoviSch/static/css/main.9e5489c3.chunk.css"
   },
   {
-    "revision": "4ef89e2a637bbb1b141e",
-    "url": "/MoviSch/static/js/2.baa0da23.chunk.js"
+    "revision": "e6e88d492cc937232067",
+    "url": "/MoviSch/static/js/2.b8ce7846.chunk.js"
   },
   {
     "revision": "28f0b8d5b390aa0fe7256bb817e49e90",
-    "url": "/MoviSch/static/js/2.baa0da23.chunk.js.LICENSE.txt"
+    "url": "/MoviSch/static/js/2.b8ce7846.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8e1dc4ce2c3f178e6a00",
-    "url": "/MoviSch/static/js/main.b8834773.chunk.js"
+    "revision": "ba620fc13a24a3be32e3",
+    "url": "/MoviSch/static/js/main.988e7c3c.chunk.js"
   },
   {
     "revision": "28a63bbda58c1bf12ab7",
@@ -30,6 +30,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "930981509d77229e9b21a4d35502081c",
     "url": "/MoviSch/static/media/HomePageLogoMobile.93098150.svg"
+  },
+  {
+    "revision": "0e863ff66e4b5803530b3fc63f0ca142",
+    "url": "/MoviSch/static/media/imdb-brands.0e863ff6.svg"
   },
   {
     "revision": "8dad80289a1ece380591ad143b616747",
