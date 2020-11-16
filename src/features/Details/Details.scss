@@ -2,7 +2,7 @@
     hr {
         color: #777777;
         width: 100vw;
-        margin: 1em -5vw;
+        margin: 5vw -5vw;
         border-top: 1px;
     }
     &__main {
@@ -55,10 +55,11 @@
                     border: 1px solid;
                     border-radius: 3px;
                     color: inherit;
+                    margin-right: .7em;
                 }
                 .duration {
-                    margin-left: .7em;
                     color: inherit;
+                    white-space: nowrap;
                 }
             }
             &__sub2 { 
@@ -87,6 +88,7 @@
             // background-color: blue;
             height: 3em;
             display: flex;
+            flex-direction: column;
             justify-content: space-evenly;
             align-items: center;
             color: var(--primary-color);
@@ -96,6 +98,21 @@
         &__division {
             width: 1px;
             border-left: 1px solid var(--primary-color);
+        }
+    }
+    &__crew {
+        text-align: left;
+        font-size: 1.25em;
+        font-weight: 300;
+        color: whitesmoke;
+        article {
+            margin-top: 5vw;
+            span {
+                &:nth-child(1) {
+                    color: var(--primary-color);
+                    margin-right: 10px;
+                }
+            }
         }
     }
 }

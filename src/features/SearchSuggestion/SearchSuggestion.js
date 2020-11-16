@@ -6,6 +6,7 @@ import ListItem from '../../components/ListItem/ListItem';
 
 import './SearchSuggestion.scss';
 import ReactPaginate from 'react-paginate';
+import { Link } from 'react-router-dom';
 
 const variants = {
     open: {
@@ -52,7 +53,9 @@ const SearchSuggestion = ({data, variant, onPageChange}) => {
                 <ul className="list">
                     {
                         data && data.results && data.results.map((item, index) => (
-                            <ListItem key={index} leadingImage={item.Poster} title={item.Title} subTitle={`${item.Type} (${item.Year})`} />
+                            <Link key={index} to={`details/${item.imdbID}`}>
+                                <ListItem leadingImage={item.Poster} title={item.Title} subTitle={`${item.Type} (${item.Year})`} />
+                            </Link>
                         ))
                     }
                 </ul>

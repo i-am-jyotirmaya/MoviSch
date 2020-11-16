@@ -117,7 +117,7 @@ const Home = () => {
                     {isMobile ? <LogoMobile/> : <LogoDesktop/>}
                 </motion.div>}
             </AnimatePresence>
-            <Link to="/details/5">Det</Link>
+            {/* <Link to="/details/5">Det</Link> */}
             <Searchbox 
                 onFocus={() => setFocus(true)} 
                 onBlur={() => !searchText && setFocus(false)}

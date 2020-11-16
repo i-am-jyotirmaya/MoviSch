@@ -48,13 +48,13 @@ const App = () => {
 
   return (
     <div className="App">
-      {/* <AnimatePresence exitBeforeEnter>
+      <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.pathname}>
-          <Route exact path="/details/:id" component={Details}/>
-          <Route exact path="/" component={Home}/>
+          <Route path="/details/:id" component={Details}/>
+          <Route path="/" component={Home}/>
         </Switch>
-      </AnimatePresence> */}
-      <Details data={{
+      </AnimatePresence>
+      {/* <Details data={{
         Title: "God of War",
         Year: "2018",
         Rated: "M",
@@ -85,7 +85,7 @@ const App = () => {
         Production: "N/A",
         Website: "N/A",
         Response: "True"
-      }}/>
+      }}/> */}
       <AnimatePresence>
         {isNetworkNotificationVisible && <motion.div initial={{translateY: 50}} exit={{translateY: 50}} animate={{translateY: 0, backgroundColor: navigator.onLine ? '#2a812a' : '#c4351c'}} className="network-notification">
           {navigator.onLine ? 'Connected Successfully' : 'No Internet Connection'}
