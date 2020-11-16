@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8afca6d870084aefbbd7f1dfa3f8b39e",
+    "revision": "132bfe37b8f5ea6d001815801603de1f",
     "url": "/MoviSch/index.html"
   },
   {
-    "revision": "ba620fc13a24a3be32e3",
-    "url": "/MoviSch/static/css/main.9e5489c3.chunk.css"
+    "revision": "1930fb79c94af7e0dd6b",
+    "url": "/MoviSch/static/css/main.8e85e5f4.chunk.css"
   },
   {
-    "revision": "e6e88d492cc937232067",
-    "url": "/MoviSch/static/js/2.b8ce7846.chunk.js"
+    "revision": "dd4a1da7660ba3517369",
+    "url": "/MoviSch/static/js/2.ebd09faf.chunk.js"
   },
   {
     "revision": "28f0b8d5b390aa0fe7256bb817e49e90",
-    "url": "/MoviSch/static/js/2.b8ce7846.chunk.js.LICENSE.txt"
+    "url": "/MoviSch/static/js/2.ebd09faf.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ba620fc13a24a3be32e3",
-    "url": "/MoviSch/static/js/main.988e7c3c.chunk.js"
+    "revision": "1930fb79c94af7e0dd6b",
+    "url": "/MoviSch/static/js/main.116c1280.chunk.js"
   },
   {
     "revision": "28a63bbda58c1bf12ab7",
@@ -32,8 +32,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/MoviSch/static/media/HomePageLogoMobile.93098150.svg"
   },
   {
-    "revision": "0e863ff66e4b5803530b3fc63f0ca142",
-    "url": "/MoviSch/static/media/imdb-brands.0e863ff6.svg"
+    "revision": "ef5a42586ff1275eb4b8110119c15955",
+    "url": "/MoviSch/static/media/IMDB_Logo_2016.ef5a4258.svg"
+  },
+  {
+    "revision": "b6d987bbd1ad719a504fee1be030c7eb",
+    "url": "/MoviSch/static/media/Metacritic_logo.b6d987bb.svg"
+  },
+  {
+    "revision": "8539850a4e41057df2a609f9540ebc08",
+    "url": "/MoviSch/static/media/Rotten_Tomatoes_logo.8539850a.svg"
   },
   {
     "revision": "8dad80289a1ece380591ad143b616747",

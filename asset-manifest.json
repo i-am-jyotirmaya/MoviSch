@@ -1,27 +1,29 @@
 {
   "files": {
-    "main.css": "/MoviSch/static/css/main.9e5489c3.chunk.css",
-    "main.js": "/MoviSch/static/js/main.988e7c3c.chunk.js",
-    "main.js.map": "/MoviSch/static/js/main.988e7c3c.chunk.js.map",
+    "main.css": "/MoviSch/static/css/main.8e85e5f4.chunk.css",
+    "main.js": "/MoviSch/static/js/main.116c1280.chunk.js",
+    "main.js.map": "/MoviSch/static/js/main.116c1280.chunk.js.map",
     "runtime-main.js": "/MoviSch/static/js/runtime-main.cfc9394c.js",
     "runtime-main.js.map": "/MoviSch/static/js/runtime-main.cfc9394c.js.map",
-    "static/js/2.b8ce7846.chunk.js": "/MoviSch/static/js/2.b8ce7846.chunk.js",
-    "static/js/2.b8ce7846.chunk.js.map": "/MoviSch/static/js/2.b8ce7846.chunk.js.map",
+    "static/js/2.ebd09faf.chunk.js": "/MoviSch/static/js/2.ebd09faf.chunk.js",
+    "static/js/2.ebd09faf.chunk.js.map": "/MoviSch/static/js/2.ebd09faf.chunk.js.map",
     "index.html": "/MoviSch/index.html",
-    "precache-manifest.065d7e696a6696cd9d5f2de6b3572967.js": "/MoviSch/precache-manifest.065d7e696a6696cd9d5f2de6b3572967.js",
+    "precache-manifest.89fa470bf6cc420f5f984b7588d49154.js": "/MoviSch/precache-manifest.89fa470bf6cc420f5f984b7588d49154.js",
     "service-worker.js": "/MoviSch/service-worker.js",
-    "static/css/main.9e5489c3.chunk.css.map": "/MoviSch/static/css/main.9e5489c3.chunk.css.map",
-    "static/js/2.b8ce7846.chunk.js.LICENSE.txt": "/MoviSch/static/js/2.b8ce7846.chunk.js.LICENSE.txt",
+    "static/css/main.8e85e5f4.chunk.css.map": "/MoviSch/static/css/main.8e85e5f4.chunk.css.map",
+    "static/js/2.ebd09faf.chunk.js.LICENSE.txt": "/MoviSch/static/js/2.ebd09faf.chunk.js.LICENSE.txt",
     "static/media/HomePageLogoDesktop.040551d9.svg": "/MoviSch/static/media/HomePageLogoDesktop.040551d9.svg",
     "static/media/HomePageLogoMobile.93098150.svg": "/MoviSch/static/media/HomePageLogoMobile.93098150.svg",
-    "static/media/imdb-brands.0e863ff6.svg": "/MoviSch/static/media/imdb-brands.0e863ff6.svg",
+    "static/media/IMDB_Logo_2016.ef5a4258.svg": "/MoviSch/static/media/IMDB_Logo_2016.ef5a4258.svg",
+    "static/media/Metacritic_logo.b6d987bb.svg": "/MoviSch/static/media/Metacritic_logo.b6d987bb.svg",
+    "static/media/Rotten_Tomatoes_logo.8539850a.svg": "/MoviSch/static/media/Rotten_Tomatoes_logo.8539850a.svg",
     "static/media/logo.svg": "/MoviSch/static/media/logo.8dad8028.svg",
     "static/media/rolling-loader.695fc692.svg": "/MoviSch/static/media/rolling-loader.695fc692.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.cfc9394c.js",
-    "static/js/2.b8ce7846.chunk.js",
-    "static/css/main.9e5489c3.chunk.css",
-    "static/js/main.988e7c3c.chunk.js"
+    "static/js/2.ebd09faf.chunk.js",
+    "static/css/main.8e85e5f4.chunk.css",
+    "static/js/main.116c1280.chunk.js"
   ]
 }
