@@ -1,7 +1,7 @@
 {
   "homepage": "http://i-am-jyotirmaya.github.io/MoviSch",
   "name": "movie-search-app",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.4.0",
@@ -11,10 +11,10 @@
     "axios": "^0.21.0",
     "framer-motion": "^2.9.4",
     "lodash": "^4.17.20",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
-    "react-loading-skeleton": "^2.1.1",
-    "react-paginate": "^6.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-loading-skeleton": "^3.2.0",
+    "react-paginate": "^8.1.5",
     "react-redux": "^7.2.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^5.0.1",
