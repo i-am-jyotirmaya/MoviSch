@@ -1,29 +1,20 @@
 {
   "files": {
-    "main.css": "/MoviSch/static/css/main.8e85e5f4.chunk.css",
-    "main.js": "/MoviSch/static/js/main.15c14528.chunk.js",
-    "main.js.map": "/MoviSch/static/js/main.15c14528.chunk.js.map",
-    "runtime-main.js": "/MoviSch/static/js/runtime-main.cfc9394c.js",
-    "runtime-main.js.map": "/MoviSch/static/js/runtime-main.cfc9394c.js.map",
-    "static/js/2.ebd09faf.chunk.js": "/MoviSch/static/js/2.ebd09faf.chunk.js",
-    "static/js/2.ebd09faf.chunk.js.map": "/MoviSch/static/js/2.ebd09faf.chunk.js.map",
+    "main.css": "/MoviSch/static/css/main.393777aa.css",
+    "main.js": "/MoviSch/static/js/main.2bf01344.js",
+    "static/media/HomePageLogoDesktop.svg": "/MoviSch/static/media/HomePageLogoDesktop.252a95607579d9e08518816c5b2a6b6f.svg",
+    "static/media/HomePageLogoMobile.svg": "/MoviSch/static/media/HomePageLogoMobile.730d485521b281978534f662029ed3c6.svg",
+    "static/media/Rotten_Tomatoes_logo.svg": "/MoviSch/static/media/Rotten_Tomatoes_logo.8e5960742cb64785a1be25dd2078c2d1.svg",
+    "static/media/Metacritic_logo.svg": "/MoviSch/static/media/Metacritic_logo.d2caf665543dd8b063188c5cd0225d30.svg",
+    "static/media/IMDB_Logo_2016.svg": "/MoviSch/static/media/IMDB_Logo_2016.2e41b29b47660d210bf1088e330ad3c2.svg",
+    "static/media/logo.svg": "/MoviSch/static/media/logo.db36153e906043854e743ee53cf5fff2.svg",
     "index.html": "/MoviSch/index.html",
-    "precache-manifest.1bd32df3f24e327837a5e8b01ac27eac.js": "/MoviSch/precache-manifest.1bd32df3f24e327837a5e8b01ac27eac.js",
-    "service-worker.js": "/MoviSch/service-worker.js",
-    "static/css/main.8e85e5f4.chunk.css.map": "/MoviSch/static/css/main.8e85e5f4.chunk.css.map",
-    "static/js/2.ebd09faf.chunk.js.LICENSE.txt": "/MoviSch/static/js/2.ebd09faf.chunk.js.LICENSE.txt",
-    "static/media/HomePageLogoDesktop.040551d9.svg": "/MoviSch/static/media/HomePageLogoDesktop.040551d9.svg",
-    "static/media/HomePageLogoMobile.93098150.svg": "/MoviSch/static/media/HomePageLogoMobile.93098150.svg",
-    "static/media/IMDB_Logo_2016.ef5a4258.svg": "/MoviSch/static/media/IMDB_Logo_2016.ef5a4258.svg",
-    "static/media/Metacritic_logo.b6d987bb.svg": "/MoviSch/static/media/Metacritic_logo.b6d987bb.svg",
-    "static/media/Rotten_Tomatoes_logo.8539850a.svg": "/MoviSch/static/media/Rotten_Tomatoes_logo.8539850a.svg",
-    "static/media/logo.svg": "/MoviSch/static/media/logo.8dad8028.svg",
-    "static/media/rolling-loader.695fc692.svg": "/MoviSch/static/media/rolling-loader.695fc692.svg"
+    "static/media/rolling-loader.svg": "/MoviSch/static/media/rolling-loader.3934cbbc1ea7dd46befe7d746de4bb36.svg",
+    "main.393777aa.css.map": "/MoviSch/static/css/main.393777aa.css.map",
+    "main.2bf01344.js.map": "/MoviSch/static/js/main.2bf01344.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.cfc9394c.js",
-    "static/js/2.ebd09faf.chunk.js",
-    "static/css/main.8e85e5f4.chunk.css",
-    "static/js/main.15c14528.chunk.js"
+    "static/css/main.393777aa.css",
+    "static/js/main.2bf01344.js"
   ]
 }
