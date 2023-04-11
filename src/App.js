@@ -1,29 +1,28 @@
-import React, { useEffect, useRef, useState } from 'react';
+import "react-loading-skeleton/dist/skeleton.css";
 
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import {setScreenSize} from './AppSlice';
-import Home from './features/Home/Home';
-import './App.scss';
-import SearchSuggestion from './features/SearchSuggestion/SearchSuggestion';
-import PageIndex from './components/PageIndex/PageIndex';
-import { useDispatch } from 'react-redux';
-import { AnimatePresence, motion } from 'framer-motion';
-import { Route, Switch, useLocation } from 'react-router-dom';
-import Details from './features/Details/Details';
+import "./App.scss";
+
+import { AnimatePresence, motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { Route, Switch, useLocation } from "react-router-dom";
+
+import { setScreenSize } from "./AppSlice";
+import Details from "./features/Details/Details";
+import Home from "./features/Home/Home";
 
 const App = () => {
   const location = useLocation();
   const onNetworkStatusChange = () => {
     setIsNetworkNotificationVisible(true);
     setTimeout(() => setIsNetworkNotificationVisible(false), 1500);
-  }
+  };
   useEffect(() => {
-    console.log('Network Status',navigator.onLine);
-    window.addEventListener('offline', () => {
+    console.log("Network Status", navigator.onLine);
+    window.addEventListener("offline", () => {
       onNetworkStatusChange();
     });
-    window.addEventListener('online', () => {
+    window.addEventListener("online", () => {
       onNetworkStatusChange();
     });
   }, []);
@@ -36,24 +35,22 @@ const App = () => {
   //       // setIsMobile(mql.matches);
   //       setScreenSize(mql.matches);
   //   });
-  
+
   //   return () => {
   //       mql.removeEventListener("change");
   //   }
   // }, [])
   const dispatch = useDispatch();
-  let mql = window.matchMedia('(max-width: 500px)');
+  let mql = window.matchMedia("(max-width: 500px)");
   // console.log(mql.matches)
   dispatch(setScreenSize(mql.matches));
 
   return (
     <div className="App">
-      <AnimatePresence exitBeforeEnter>
-        <Switch location={location} key={location.pathname}>
-          <Route path="/details/:id" component={Details}/>
-          <Route path="/" component={Home}/>
-        </Switch>
-      </AnimatePresence>
+      <Switch location={location} key={location.pathname}>
+        <Route path="/details/:id" component={Details} />
+        <Route path="/" component={Home} />
+      </Switch>
       {/* <Details data={{
         Title: "God of War",
         Year: "2018",
@@ -87,12 +84,19 @@ const App = () => {
         Response: "True"
       }}/> */}
       <AnimatePresence>
-        {isNetworkNotificationVisible && <motion.div initial={{translateY: 50}} exit={{translateY: 50}} animate={{translateY: 0, backgroundColor: navigator.onLine ? '#2a812a' : '#c4351c'}} className="network-notification">
-          {navigator.onLine ? 'Connected Successfully' : 'No Internet Connection'}
-        </motion.div>}
+        {isNetworkNotificationVisible && (
+          <motion.div
+            initial={{ translateY: 50 }}
+            exit={{ translateY: 50 }}
+            animate={{ translateY: 0, backgroundColor: navigator.onLine ? "#2a812a" : "#c4351c" }}
+            className="network-notification"
+          >
+            {navigator.onLine ? "Connected Successfully" : "No Internet Connection"}
+          </motion.div>
+        )}
       </AnimatePresence>
     </div>
   );
-}
+};
 
 export default App;

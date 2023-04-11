@@ -11,7 +11,7 @@ import NoPoster from "../../assets/no-poster.png";
 import { ReactComponent as RottenTomatoesLogo } from "../../assets/Rotten_Tomatoes_logo.svg";
 import Chip from "../../components/Chip/Chip";
 import Logo from "../../components/Logo/Logo";
-import { fetchDetailsAsync, selectDetails } from "./DetailsSlice";
+import { fetchDetailsAsync, resetState, selectDetails } from "./DetailsSlice";
 
 const Details = ({ match }) => {
   // console.log(match.params.id)
@@ -37,16 +37,21 @@ const Details = ({ match }) => {
   const [isMobile, setIsMobile] = useState(false);
   const [posterUrl, setPosterUrl] = useState("");
   const data = useSelector(selectDetails);
+  console.log("data", data);
+
   useEffect(() => {
     console.log(store.getState());
     setIsMobile(store.getState().app.isMobile);
   }, []);
+
   useEffect(() => {
+    //Reset the Page info on load, to not show stale info or other movie info
+    dispatch(resetState());
     const imdbId = match.params.id;
     if (imdbId) {
       dispatch(fetchDetailsAsync(imdbId));
     }
-  });
+  }, []);
 
   useEffect(() => {
     if (data.Poster === "N/A") setPosterUrl(NoPoster);
@@ -65,7 +70,7 @@ const Details = ({ match }) => {
       <div style={{ display: "flex" }}>
         <Logo isMobile={isMobile} style="focus" />
       </div>
-      <SkeletonTheme color="rgba(0,0,0,.33)" highlightColor="rgba(0,0,0,.33)">
+      <SkeletonTheme baseColor="rgba(0,0,0,.33)" highlightColor="rgba(0,0,0,.33)" inline={true}>
         <div className="details__main">
           <div className="details__main__poster">
             {posterUrl ? <img src={posterUrl} alt="" /> : <Skeleton height="100%" />}

@@ -1,14 +1,13 @@
-import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
-import homeReducer from '../features/Home/HomeSlice';
+import { configureStore } from "@reduxjs/toolkit";
+
 import appReducer from "../AppSlice";
 import detailsReducer from "../features/Details/DetailsSlice";
+import homeReducer from "../features/Home/HomeSlice";
 
 export default configureStore({
   reducer: {
-    counter: counterReducer,
     home: homeReducer,
     app: appReducer,
-    details: detailsReducer
+    details: detailsReducer,
   },
 });
